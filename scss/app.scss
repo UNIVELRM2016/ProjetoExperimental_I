@@ -48,3 +48,43 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@font-face {
+    font-family: 'Chevin';
+    src: url('../fonts/chevinextrabold.woff2') format('woff2'),
+         url('../fonts/chevinextrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  background: url("../img/univel.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+form{
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #009fdf;
+  padding: 3px;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.displayNone{
+  display: none;
+}
