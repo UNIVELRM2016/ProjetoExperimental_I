@@ -31,3 +31,9 @@ function http_post ($url, $data)
         , 'headers'=>$http_response_header
         );
 }
+
+
+function consultaContexto(){
+  $contexto = $_SESSION["contexto"];
+  return $contexto;
+}

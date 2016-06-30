@@ -1,5 +1,3 @@
-$(document).foundation();
-
 function login(){
   var login = $("#login").val();
   var senha = $("#senha").val();
@@ -15,10 +13,23 @@ function login(){
     dataType: "json",
     success: function(data){
       if(data.sucesso == 1){
-        $('form').hide(500);
-        setTimeout(function(){
-          location.reload();
-        }, 600);
+        var url = "/ajax/contexto/selecionaContexto.php";
+        $.getJSON(url, function(data){
+          $('form').hide(500);
+          if(data.sucesso == 1 && data.selecionarContexto == 0){
+            setTimeout(function(){
+              location.href="/";
+            }, 600);
+          }else{
+            if(data.deslogar == 1){
+              deslogar();
+            }else{
+              setTimeout(function(){
+                location.href="/selecionarContexto.php";
+              }, 600);
+            }
+          }
+        });
       }else{
         $("#alertaLogin p").html(data.motivo);
         if($("#alertaLogin").hasClass("displayNone")){

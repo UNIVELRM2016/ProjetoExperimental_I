@@ -15,7 +15,7 @@
     if($senha == $usuario["senha"]){
         echo json_encode(array("sucesso" => 1, "erro" => 0, "token" => $usuario["token"]));
     }else{
-      echo json_encode(array("sucesso" => 0, "erro" => 1, "motivo" => "Login ou senha incorretos."));
+      echo json_encode(array("sucesso" => 0, "erro" => 1, "motivo" => "Login ou senha incorretos. "));
     }
   }else{
     echo json_encode(array("sucesso" => 0, "erro" => 1, "motivo" => "Login ou senha incorretos. "));

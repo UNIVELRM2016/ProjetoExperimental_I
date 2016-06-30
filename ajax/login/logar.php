@@ -11,14 +11,15 @@
     $JSON = json_decode($JSON);
     //  print_r($JSON);
     if($JSON->sucesso == 1){
+      $_SESSION["login"] = $login;
       $_SESSION["token"] = $JSON->token;
       echo json_encode(array("sucesso" => 1, "erro" => 0));
     }elseif($JSON->erro == 1){
-      isset($_SESSION["token"]);
+      unset($_SESSION["token"]);
       session_destroy();
       echo json_encode(array("sucesso" => 0, "erro" => 1, "motivo" => $JSON->motivo));
     }else{
-      isset($_SESSION["token"]);
+      unset($_SESSION["token"]);
       session_destroy();
       echo json_encode(array("sucesso" => 0, "erro" => 1, "motivo" => "Algo deu errado. Por favor, tente novamente."));
     }

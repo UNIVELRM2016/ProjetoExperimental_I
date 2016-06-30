@@ -62,12 +62,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  font-family: "Chevin", sans-serif;
 }
 
 form{
@@ -87,4 +82,27 @@ form{
 
 .displayNone{
   display: none;
+}
+header{
+
+  #logo{
+    max-height: 55px;
+  }
+  .top-bar-right{
+    li{
+      line-height: 55px;
+      font-size: 1.2rem;
+      padding-bottom: 11.2px;
+      i{
+        color: #6ecff6;
+      }
+    }
+    #avatar{
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+  }
+  color: #fff;
+
 }

@@ -2485,12 +2485,12 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #2199e8;
+  color: #FFF;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
   a:hover, a:focus {
-    color: #1585cf; }
+    color: #EEE; }
   a img {
     border: 0; }
 
@@ -3514,7 +3514,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: #2199e8 transparent transparent;
+  border-color: #FFF transparent transparent;
   border-top-style: solid;
   border-bottom-width: 0;
   right: 5px;
@@ -3547,7 +3547,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent #2199e8 transparent transparent;
+  border-color: transparent #FFF transparent transparent;
   border-right-style: solid;
   border-left-width: 0; }
 
@@ -3557,7 +3557,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent transparent transparent #2199e8;
+  border-color: transparent transparent transparent #FFF;
   border-left-style: solid;
   border-right-width: 0; }
 
@@ -3579,7 +3579,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: #2199e8 transparent transparent;
+    border-color: #FFF transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     right: 5px;
@@ -3601,7 +3601,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent #FFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .dropdown.menu.medium-vertical > li.opens-right > a::after {
@@ -3610,7 +3610,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent #FFF;
     border-left-style: solid;
     border-right-width: 0; } }
 
@@ -3632,7 +3632,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: #2199e8 transparent transparent;
+    border-color: #FFF transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     right: 5px;
@@ -3654,7 +3654,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent #FFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .dropdown.menu.large-vertical > li.opens-right > a::after {
@@ -3663,7 +3663,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent #FFF;
     border-left-style: solid;
     border-right-width: 0; } }
 
@@ -3712,7 +3712,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent #FFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
@@ -3721,7 +3721,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent #FFF;
     border-left-style: solid;
     border-right-width: 0; }
   .is-dropdown-submenu .is-dropdown-submenu {
@@ -4605,7 +4605,7 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: #009fdf; }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
@@ -5247,12 +5247,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  font-family: "Chevin", sans-serif; }
 
 form {
   background: #fff;
@@ -5268,3 +5263,18 @@ form {
 
 .displayNone {
   display: none; }
+
+header {
+  color: #fff; }
+  header #logo {
+    max-height: 55px; }
+  header .top-bar-right li {
+    line-height: 55px;
+    font-size: 1.2rem;
+    padding-bottom: 11.2px; }
+    header .top-bar-right li i {
+      color: #6ecff6; }
+  header .top-bar-right #avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; }
