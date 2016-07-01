@@ -5249,12 +5249,6 @@ body {
   background-size: 100%;
   font-family: "Chevin", sans-serif; }
 
-form {
-  background: #fff;
-  border-radius: 10px;
-  border: 2px solid #009fdf;
-  padding: 3px; }
-
 .textCenter {
   text-align: center; }
 
@@ -5277,4 +5271,4 @@ header {
   header .top-bar-right #avatar {
     width: 40px;
     height: 40px;
-    border-radius: 10px; }
+    border-radius: 25px; }

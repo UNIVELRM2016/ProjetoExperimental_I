@@ -2,21 +2,26 @@
   $d = "../../";
   include($d."funcoes.php");
 
-  $login = $_SESSION["login"];
-  $token = $_SESSION["token"];
+  $post["login"] = $_SESSION["login"];
+  $post["token"] = $_SESSION["token"];
+  $post["idContexto"] = $_POST["idContexto"];
 
-  if($login != NULL && $token != NULL){
+  if($post["login"] != NULL && $post["token"]  != NULL){
 
-    $JSON = http_post($APIListaContexto, array("login" => $login, "token" => $token))["content"];
+    $JSON = http_post($APIListaContexto, $post)["content"];
     // echo($JSON);
     $JSON = json_decode($JSON);
     // print_r($JSON);
     if($JSON->sucesso == 1){
       $idContextoAtual = NULL;
-      foreach ($JSON->contextos as $inf) {
-        if($diaInicio <= $time && $diaFim >= $time){
-          $idContextoAtual = $inf->idContexto;
+      if($post["idContexto"] == NULL){
+        foreach ($JSON->contextos as $inf) {
+          if(strtotime($inf->diaInicio) <= time() && strtotime($inf->diaFim) >= time()){
+            $idContextoAtual = $inf->idContexto;
+          }
         }
+      }else{
+        $idContextoAtual = $post["idContexto"];
       }
       // echo $idContextoAtual;
       if($idContextoAtual != NULL){

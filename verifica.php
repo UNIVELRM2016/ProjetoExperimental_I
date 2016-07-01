@@ -8,6 +8,7 @@
   if($login != NULL && $token != NULL){
       $JSON = http_post($APIVerificaLogin, array("login" => $login, "token" => $token))["content"];
       $JSON = json_decode($JSON);
+      // print_r($JSON);
       if($JSON->deslogado == 1){
         unset($_SESSION["login"]);
         unset($_SESSION["token"]);

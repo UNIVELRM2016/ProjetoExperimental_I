@@ -40,6 +40,36 @@ function login(){
   });
 }
 
+function selecionarContexto(){
+  var idContexto = $("#selecionaContexto").val();
+
+  if(!$("#alertaLogin").hasClass("displayNone")){
+    $("#alertaLogin").addClass("displayNone");
+  }
+
+  $.ajax({
+    type: "post",
+    url: "ajax/contexto/selecionaContexto.php",
+    data: "idContexto="+idContexto,
+    dataType: "json",
+    success: function(data){
+      if(data.sucesso == 1 && data.selecionarContexto == 0){
+        setTimeout(function(){
+          location.href="/";
+        }, 600);
+      }else{
+        if(data.deslogar == 1){
+          deslogar();
+        }else{
+          setTimeout(function(){
+            location.href="/selecionarContexto.php";
+          }, 600);
+        }
+      }
+    }
+  });
+}
+
 $("#botaoLogin").click(function(){
   login();
 });
@@ -54,4 +84,8 @@ $("#senha").keypress(function(e){
   if(e.which == 13){
     login();
   }
+});
+
+$("#selecionaContexto").change(function(){
+  selecionarContexto();
 });

@@ -1,7 +1,5 @@
 <?php
-
-  unset($_SESSION["login"]);
-  unset($_SESSION["token"]);
+  session_start();
   $_SESSION["login"] = "";
   $_SESSION["token"] = "";
   session_destroy();

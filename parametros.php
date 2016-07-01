@@ -10,5 +10,6 @@ $urlSistema = "http://newrm.polles.me/";
 $APILogin = "http://newrm.polles.me/JSON/login.php";
 $APIVerificaLogin = "http://newrm.polles.me/JSON/verificaLogin.php";
 $APIListaContexto = "http://newrm.polles.me/JSON/entidades/contexto/listaContexto.php";
+$APIBuscaContexto = "http://newrm.polles.me/JSON/entidades/contexto/buscaContexto.php";
 
 ?>

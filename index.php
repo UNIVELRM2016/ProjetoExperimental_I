@@ -1,6 +1,8 @@
 <?php
   $d = "";
   include("verifica.php");
+  $contexto = consultaContexto();
+  // print_r($contexto);
 ?><!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -30,11 +32,11 @@
         </div>
         <div class="top-bar-right">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li><i class="fi-book"></i> <?php echo consultaContexto(); ?></li>
+            <li><a href="/selecionarContexto.php"><i class="fi-book"></i> <?php echo $contexto->curso . " " . $contexto->ano . "/" . $contexto->semestre; ?></a></li>
             <li>
-              <a href="#"><i class="fi-torso"></i> Fulano de Tal <img src="<?php echo $urlSistema; ?>img/avatar.png" id="avatar"></a>
+              <a href="#"><i class="fi-torso"></i> <?php echo $contexto->nomeAluno; ?> <img src="<?php echo get_gravatar($contexto->emailAluno); ?>" id="avatar"></a>
               <ul class="menu vertical">
-                <li><a>RA: 15.4131</a></li>
+                <li><a>RA: <?php echo $contexto->raAluno; ?></a></li>
                 <li><a id="sair">Sair</a></li>
               </ul>
             </li>
